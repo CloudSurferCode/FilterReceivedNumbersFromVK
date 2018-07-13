@@ -23,4 +23,4 @@ mask = (df['mob_clean'].str.len() >= 10) & (df['mob_clean'].str.contains(r'^[78]
 df.loc[~mask, ['mob_clean']] = ''
 
 # сохраняем DataFrame в Excel файл
-df.to_excel(r'D:/PythonProjects/Lesson1/gp/***.xlsx', index=False)
+df.to_excel(r'D:/PythonProjects/Numbers/***.xlsx', index=False)
