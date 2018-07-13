@@ -10,7 +10,7 @@ import pandas as pd
 import openpyxl
 
 # читаем Excel в Pandas DataFrame
-df = pd.read_excel(r'musicals_operetta.xlsx', dtype={'mobile_phone':'str'})
+df = pd.read_excel(r'***.xlsx', dtype={'mobile_phone':'str'})
 
 # удаляем все "не цифры"
 df['mob_clean'] = df.mobile_phone.str.replace(r'\D','')
@@ -23,4 +23,4 @@ mask = (df['mob_clean'].str.len() >= 10) & (df['mob_clean'].str.contains(r'^[78]
 df.loc[~mask, ['mob_clean']] = ''
 
 # сохраняем DataFrame в Excel файл
-df.to_excel(r'D:/PythonProjects/Lesson1/gp/musicals_operetta.xlsx', index=False)
+df.to_excel(r'D:/PythonProjects/Lesson1/gp/***.xlsx', index=False)
